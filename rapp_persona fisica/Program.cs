@@ -69,7 +69,7 @@ namespace rapp_persona_fisica
                 return this.cognome;
             }
 
-            private void SetRegistrato(bool registrato)
+            public void SetRegistrato(bool registrato)
             {
                 this.registrato = registrato;
             }
@@ -88,7 +88,13 @@ namespace rapp_persona_fisica
 
             public string Mostra()
             {
+                if (this.registrato)
                 return "\nCodice: " + codice + "\nNome: " + nome + "\nCognome: " + cognome + "\nRegistrato: " + registrato;
+
+                else
+                {
+                    return "utente non registrato";
+                }
             }
         }
     }
